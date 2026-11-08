@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flower Shop · Formulario de captura de datos</title>
+    <style>
+        :root {
+            --mint: #b7f6c9;
+            --orange: #eaa63c;
+            --blue: #94c2ef;
+            --blue-line: #2c5f9e;
+            --navy: #16233d;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 24px 16px;
+            background: #f7f7f8;
+            color: #1c1c1c;
+            font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrap {
+            max-width: 960px;
+            margin: 0 auto;
+            background: var(--mint);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .10);
+        }
+
+        /* ---------- Marca ---------- */
+        .brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 26px 20px 22px;
+        }
+
+        .brand__logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 152px;
+            height: 140px;
+            background: #fff;
+        }
+
+        .brand__logo img { width: 118px; max-height: 118px; object-fit: contain; }
+
+        .brand__logo svg {
+            width: 118px;
+            height: auto;
+        }
+
+        .brand__uni {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .02em;
+            color: var(--navy);
+        }
+
+        /* ---------- Banda naranja ---------- */
+        .banner {
+            margin: 0;
+            padding: 18px 20px;
+            background: var(--orange);
+            color: var(--navy);
+            text-align: center;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: .02em;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            margin: 26px 0 18px;
+            text-align: center;
+            font-size: 21px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--navy);
+        }
+
+        /* ---------- Formulario ---------- */
+        .pedido { padding: 0 20px 26px; }
+
+        .panels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .panel {
+            padding: 22px;
+            background: var(--blue);
+            border: 1px solid var(--blue-line);
+        }
+
+        .field {
+            display: grid;
+            grid-template-columns: 104px 1fr;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .field:last-child { margin-bottom: 0; }
+
+        .field label { font-size: 15px; }
+
+        .panel input[type="text"] {
+            width: 100%;
+            padding: 8px 10px;
+            background: #fff;
+            border: 1px solid #6d97c6;
+            border-radius: 2px;
+            font: inherit;
+            font-size: 14px;
+            color: #1c1c1c;
+        }
+
+        .panel input[type="text"]:focus {
+            outline: 2px solid var(--blue-line);
+            outline-offset: 1px;
+        }
+
+        .panel__label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .banks {
+            margin: 22px 0 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .banks legend {
+            margin-bottom: 10px;
+            padding: 0;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .banks label {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 9px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .banks input {
+            width: 15px;
+            height: 15px;
+            margin: 0;
+            accent-color: var(--blue-line);
+        }
+
+        /* ---------- Botón ---------- */
+        .actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 26px;
+        }
+
+        .actions button {
+            padding: 10px 26px;
+            background: linear-gradient(#f4f4f4, #dcdcdc);
+            color: #1c1c1c;
+            border: 1px solid #4a4a4a;
+            border-radius: 3px;
+            font: inherit;
+            font-size: 15px;
+            letter-spacing: .03em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background .15s ease, box-shadow .15s ease;
+        }
+
+        .actions button:hover {
+            background: linear-gradient(#ffffff, #e8e8e8);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+        }
+
+        .actions button:focus-visible {
+            outline: 2px solid var(--blue-line);
+            outline-offset: 2px;
+        }
+
+        /* ---------- Pie ---------- */
+        .foot {
+            padding: 18px 20px 22px;
+            background: var(--orange);
+            text-align: center;
+            font-size: 14px;
+            line-height: 2;
+            color: #1b1b1b;
+        }
+
+        .foot p { margin: 0; }
+
+        /* ---------- Móvil ---------- */
+        @media (max-width: 780px) {
+            body { padding: 12px 10px; }
+            .panels { grid-template-columns: 1fr; }
+            .banner { padding: 14px 14px; font-size: 19px; }
+            .subtitle { font-size: 18px; }
+            .brand__logo { width: 130px; height: 122px; }
+            .field { grid-template-columns: 1fr; gap: 5px; }
+            .panel { padding: 18px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="wrap">
+
+        <section class="brand">
+            <div class="brand__logo">
+                <img src="../imagenes/LOGO.png" alt="Logo de la Universidad Privada de Trujillo">
+            </div>
+            <p class="brand__uni">UNIVERSIDAD PRIVADA DE TRUJILLO</p>
+        </section>
+
+        <h1 class="banner">Formulario de captura de datos</h1>
+
+        <form class="pedido" action="#" method="post">
+
+            <h2 class="subtitle">Nuevo pedido</h2>
+
+            <div class="panels">
+
+                <section class="panel">
+                    <div class="field">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre"
+                               autocomplete="given-name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos"
+                               autocomplete="family-name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion"
+                               autocomplete="street-address">
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <label class="panel__label" for="tarjeta">
+                        Número de tarjeta de crédito:
+                    </label>
+                    <input type="text" id="tarjeta" name="tarjeta"
+                           inputmode="numeric" maxlength="19"
+                           placeholder="Ingrese el número de tarjeta" required>
+
+                    <fieldset class="banks">
+                        <legend>Seleccione su banco:</legend>
+
+                        <label>
+                            <input type="radio" name="banco" value="BBVA" required>
+                            BBVA
+                        </label>
+                        <label>
+                            <input type="radio" name="banco" value="BCP">
+                            BCP
+                        </label>
+                        <label>
+                            <input type="radio" name="banco" value="SCOTIABANK">
+                            SCOTIABANK
+                        </label>
+                        <label>
+                            <input type="radio" name="banco" value="CAJA AREQUIPA">
+                            CAJA AREQUIPA
+                        </label>
+                    </fieldset>
+                </section>
+
+            </div>
+
+            <div class="actions">
+                <button type="submit">Realizar pedido</button>
+            </div>
+
+        </form>
+
+        <footer class="foot">
+            <p>Copyright 2026 - Derechos reservados Florería</p>
+            <p>Práctica de HTML y CSS</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

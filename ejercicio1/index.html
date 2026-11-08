@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario - Currículum Vitae</title>
+  <style>
+    .foto {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 65px;
+      height: 75px;
+      border: 3px solid #000;
+    }
+
+    .acciones { text-align: center; }
+  </style>
+</head>
+<body>
+  <form action="enviacurriculo.htm" method="post">
+    <table border="4" width="1020" cellpadding="10" align="center" style="border-collapse: collapse;">
+      <tr>
+        <td>
+
+          <!-- Cabecera -->
+          <table width="100%" border="0">
+            <tr>
+              <td align="center">
+                <h2>CURRICULUM VITAE</h2>
+              </td>
+              <td align="center" width="100">
+                <div class="foto">FOTO</div>
+              </td>
+            </tr>
+          </table>
+          <hr>
+
+          <!-- Datos personales -->
+          <h3>DATOS PERSONALES</h3>
+          <hr>
+
+          <table width="100%" border="0" cellpadding="2">
+            <tr>
+              <td width="50%">
+                Apellidos:
+                <input type="text" name="apellidos" required>
+              </td>
+              <td width="50%">
+                Nombre:
+                <input type="text" name="nombre" required>
+              </td>
+            </tr>
+          </table>
+
+          <p>
+            DNI:
+            <input type="text" name="dni" maxlength="8" pattern="[0-9]{8}" required>
+          </p>
+
+          <table width="100%" border="0" cellpadding="2">
+            <tr>
+              <td width="50%">
+                Fecha De Nacimiento:
+                <input type="date" name="fecha_nacimiento">
+              </td>
+              <td width="50%">
+                Lugar:
+                <input type="text" name="lugar">
+              </td>
+            </tr>
+          </table>
+
+          <p>
+            Dirección:
+            <input type="text" name="direccion" size="50">
+          </p>
+
+          <table width="100%" border="0" cellpadding="2">
+            <tr>
+              <td width="50%">
+                Localidad:
+                <input type="text" name="localidad">
+              </td>
+              <td width="50%">
+                Provincia:
+                <input type="text" name="provincia">
+              </td>
+            </tr>
+          </table>
+
+          <p>
+            Teléfono:
+            <input type="tel" name="telefono">
+          </p>
+
+          <p>
+            Teléfono Móvil:
+            <input type="tel" name="movil">
+          </p>
+
+          <p>
+            E-Mail:
+            <input type="email" name="email" required>
+          </p>
+
+          <br>
+
+          <!-- Formación y estudios -->
+          <h3>FORMACION Y ESTUDIOS</h3>
+          <hr>
+
+          <p>
+            Titulación:
+            <input type="text" name="titulacion" size="50">
+          </p>
+
+          <p>
+            Idiomas:
+            <input type="text" name="idiomas" size="50">
+          </p>
+
+          <p>
+            Conocimientos informáticos:
+            <input type="text" name="informatica" size="50">
+          </p>
+
+          <p>
+            Cursos y seminarios:
+            <input type="text" name="cursos" size="50">
+          </p>
+
+          <br>
+
+          <!-- Experiencia profesional -->
+          <h3>EXPERIENCIA PROFESIONAL</h3>
+          <hr>
+
+          <p>
+            Empresa:
+            <input type="text" name="empresa" size="50">
+          </p>
+
+          <p>
+            Fecha:
+            <input type="date" name="fecha_experiencia">
+          </p>
+
+          <p>
+            Puesto/Actividad desarrollada:
+            <input type="text" name="puesto" size="50">
+          </p>
+
+          <br>
+
+          <!-- Datos complementarios -->
+          <h3>DATOS COMPLEMENTARIOS</h3>
+          <hr>
+
+          <p>
+            <textarea name="datos_complementarios" rows="4" cols="60"></textarea>
+          </p>
+
+          <br>
+
+          <p>
+            Todo lo expuesto anteriormente podrá ser
+            acreditado, en caso de solicitud.
+          </p>
+
+          <p>
+            Lugar:
+            <input type="text" name="lugar_actual">
+            Fecha:
+            <input type="date" name="fecha_actual">
+          </p>
+
+          <br><br>
+
+          <p class="acciones">
+            <input type="submit" value="Enviar Formulario">
+            <input type="reset" value="Limpiar Formulario">
+          </p>
+
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

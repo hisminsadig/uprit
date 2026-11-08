@@ -1,4 +1,7 @@
-# UPRIT
+## UPRIT
+# ESTUDIANTE : IVAN T. MOYA HUAYTAN
+# SECCIÓN: "A"
+# CARRERA: INGENIERI DE SISTEMAS E IA
 
 # Ejercicio de Formulario
 

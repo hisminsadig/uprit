@@ -87,5 +87,5 @@ También es posible abrir directamente `ejercicio1/index.html` o `ejercicio2/ind
 
 ## Autor e institución
 
-- **Autor:** Ivan Teodolio Moyahuaytan
-- **Institución:** Universidad Privada de Trujillo
+- **Autor:** IVAN T. MOYA HUAYTAN
+- **Institución:** UNIVERSIDAD PRIVADA DE TRUJILLO
